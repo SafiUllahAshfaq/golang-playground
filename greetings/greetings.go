@@ -29,3 +29,20 @@ func randomFormat() string {
 
 	return formats[rand.Intn(len(formats))]
 }
+
+func Hellos(names []string) (map[string]string, error) {
+	// init empty array, syntax `make(map[key-type]value-type)`
+	messages := make(map[string]string)
+
+	for _, name := range names {
+		message, err := Hello(name)
+
+		if err != nil {
+			return nil, err
+		}
+
+		messages[name] = message
+	}
+
+	return messages, nil
+}
