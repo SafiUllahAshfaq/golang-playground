@@ -2,12 +2,10 @@ package main
 
 import (
 	"fmt"
-
 	"log"
+	"playground/greetings"
 
 	"rsc.io/quote/v4"
-
-	"playground/greetings"
 )
 
 func main() {
